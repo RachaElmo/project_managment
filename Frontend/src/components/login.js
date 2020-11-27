@@ -27,6 +27,8 @@ const Login = (props) => {
                         axios.get('api/user').then(response => {
                             sessionStorage.setItem('role', response.data.role);
                             setRole(response.data.role);
+                            sessionStorage.setItem('userId', response.data.id);
+                            sessionStorage.setItem('username', response.data.name);
 
                         });
                     }
